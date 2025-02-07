@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shege Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Shege Results</h1>
+        <p>{{ tagline }}</p>
+        <p>Your Shege Score: <strong>{{ score }}</strong></p>
+<!-- Display image below category -->
+<img src="{{ url_for('static', filename='images/' + icon) }}" alt="{{ category }} Icon" class="category-icon">
+
+        <!-- Category with dynamic icon placed below the name -->
+        <p class="category">
+            <strong>{{ category }}</strong>
+        </p>
+
+
+        
+
+        <!-- Action Buttons -->
+        <button onclick="window.location.href='/'">Retake Test</button>
+
+        <div class="share">
+            <p>Powered by </p>
+            <img src="{{ url_for('static', filename='imperium_logo.png') }}" alt="Imperium Logo">
+            
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <button id="download-btn">Download as Image</button>
+            <button id="share-twitter">Share on Twitter</button>
+            <button id="share-whatsapp">Share on WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Add html2canvas script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Load script.js LAST -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

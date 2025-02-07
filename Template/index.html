@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shege Calculator</title>
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Shege Calculator</h1>
+        <form action="/result" method="POST">
+            <div class="shege-list">
+                <label><input type="checkbox" name="shege1"> No power for a day</label><br>
+                <label><input type="checkbox" name="shege2"> Generator struggling to start</label><br>
+                <label><input type="checkbox" name="shege3"> No light at night, no fan</label><br>
+                <label><input type="checkbox" name="shege4"> Power cut during a major event (e.g. football match)</label><br>
+                <label><input type="checkbox" name="shege5"> Rushing to get errands done before light goes out</label><br>
+                <label><input type="checkbox" name="shege6"> Generator refuses to start when needed</label><br>
+                <label><input type="checkbox" name="shege7"> Phone charging with a faulty power bank because there's no light</label><br>
+                <label><input type="checkbox" name="shege8"> Missed deadlines because of no power</label><br>
+                <label><input type="checkbox" name="shege9"> Food spoilage due to power outage</label><br>
+                <label><input type="checkbox" name="shege10"> Using candles as the only source of light</label><br>
+                <label><input type="checkbox" name="shege11"> Wi-Fi stops working during a video call</label><br>
+                <label><input type="checkbox" name="shege12"> Studying or working under a rechargeable lamp</label><br>
+                <label><input type="checkbox" name="shege13"> TV interrupted by power failure</label><br>
+                <label><input type="checkbox" name="shege14"> Sleeping outside due to heat from no power</label><br>
+                <label><input type="checkbox" name="shege15"> Disturbed by noisy generator neighbors during a blackout</label><br>
+                <label><input type="checkbox" name="shege16"> Laptop dies during critical work due to power loss</label><br>
+                <label><input type="checkbox" name="shege17"> Cancelling plans due to no light</label><br>
+                <label><input type="checkbox" name="shege18"> Phone can't make calls because it’s dead from no light</label><br>
+                <label><input type="checkbox" name="shege19"> Multiple power cuts in one day, each lasting hours</label><br>
+                <label><input type="checkbox" name="shege20"> Spending an entire weekend in darkness with no light</label><br>
+                <label><input type="checkbox" name="shege21"> Trying to charge your phone with your laptop</label><br>
+            </div>
+            <button type="submit">See Your Shege</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
